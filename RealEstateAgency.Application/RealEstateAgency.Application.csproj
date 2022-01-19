@@ -18,8 +18,4 @@
     <ProjectReference Include="..\RealEstateAgency.Domain\RealEstateAgency.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Clients\Queries\GetClientList\" />
-  </ItemGroup>
-
 </Project>
