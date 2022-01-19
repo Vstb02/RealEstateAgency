@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace RealEstateAgency.Application.Common.Exceptions
+﻿namespace RealEstateAgency.Application.Common.Exceptions
 {
     public class NotFoundException : Exception
     {
