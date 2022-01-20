@@ -7,17 +7,17 @@ namespace RealEstateAgency.Application.Clients.Commands.UpdateClient
         public UpdateClientCommandValidator()
         {
             RuleFor(updateClientCommand =>
-                    updateClientCommand.Id).NotEqual(Guid.Empty);
+                updateClientCommand.Id).NotEqual(Guid.Empty);
             RuleFor(updateClientCommand =>
-                    updateClientCommand.Name).NotEmpty().MaximumLength(250);
+                updateClientCommand.Name).MaximumLength(250);
             RuleFor(updateClientCommand =>
-                updateClientCommand.Surname).NotEmpty().MaximumLength(250);
+                updateClientCommand.Surname).MaximumLength(250);
             RuleFor(updateClientCommand =>
-                updateClientCommand.Patronymic).NotEmpty().MaximumLength(250);
+                updateClientCommand.Patronymic).MaximumLength(250);
             RuleFor(updateClientCommand =>
-                updateClientCommand.Email).NotEmpty().MaximumLength(250);
+                updateClientCommand.Email).MaximumLength(250);
             RuleFor(updateClientCommand =>
-                updateClientCommand.Phone).NotEmpty().MaximumLength(20);
+                updateClientCommand.Phone).MaximumLength(20);
         }
     }
 }

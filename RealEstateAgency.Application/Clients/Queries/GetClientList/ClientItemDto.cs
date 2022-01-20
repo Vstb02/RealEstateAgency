@@ -21,7 +21,7 @@ namespace RealEstateAgency.Application.Clients.Queries.GetClientList
         {
             profile.CreateMap<Client, ClientItemDto>()
                 .ForMember(clientDto => clientDto.Id,
-                    opt => opt.MapFrom(note => note.Id))
+                    opt => opt.MapFrom(client => client.Id))
                 .ForMember(clientDto => clientDto.Name,
                     opt => opt.MapFrom(client => client.Name))
                 .ForMember(clientDto => clientDto.Surname,

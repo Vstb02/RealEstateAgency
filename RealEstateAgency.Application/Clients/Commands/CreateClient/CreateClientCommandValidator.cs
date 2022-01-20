@@ -9,13 +9,13 @@ namespace RealEstateAgency.Application.Clients.Commands.CreateClient
             RuleFor(createClientCommand =>
                 createClientCommand.Name).NotEmpty().MaximumLength(250);
             RuleFor(createClientCommand =>
-                createClientCommand.Surname).NotEmpty().MaximumLength(250);
+                createClientCommand.Surname).MaximumLength(250);
             RuleFor(createClientCommand =>
-                createClientCommand.Patronymic).NotEmpty().MaximumLength(250);
+                createClientCommand.Patronymic).MaximumLength(250);
             RuleFor(createClientCommand =>
-                createClientCommand.Email).NotEmpty().MaximumLength(250);
+                createClientCommand.Email).MaximumLength(250);
             RuleFor(createClientCommand =>
-                createClientCommand.Phone).NotEmpty().MaximumLength(20);
+                createClientCommand.Phone).MaximumLength(20);
         }
     }
 }
