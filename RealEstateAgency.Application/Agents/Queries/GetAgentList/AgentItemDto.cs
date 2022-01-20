@@ -28,7 +28,7 @@ namespace RealEstateAgency.Application.Agents.Queries.GetAgentList
                 .ForMember(agentDto => agentDto.Patronymic,
                     opt => opt.MapFrom(agent => agent.Patronymic))
                 .ForMember(agentDto => agentDto.DealShare,
-                    opt => opt.MapFrom(agent => agent.DealShare))
+                    opt => opt.MapFrom(agent => agent.DealShare));
         }
     }
 }

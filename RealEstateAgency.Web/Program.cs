@@ -1,10 +1,21 @@
 using RealEstateAgency.Application;
+using RealEstateAgency.Application.Common.Interfaces;
 using RealEstateAgency.Infrastructure;
 using RealEstateAgency.Infrastructure.Persistence;
+using AutoMapper;
+using System.Reflection;
+using RealEstateAgency.Application.Common.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddAutoMapper(config =>
+{
+    config.AddProfile(new MappingProfile(Assembly.GetExecutingAssembly()));
+    config.AddProfile(new MappingProfile(typeof(IApplicationDbContext).Assembly));
+});
+
 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
