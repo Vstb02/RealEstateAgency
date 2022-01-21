@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace RealEstateAgency.Web.Controllers
 {
     [ApiController]
-    [Route("api/[Controller]")]
+    [Route("api/[Controller]/[Action]")]
     public class ApiControllerBase : ControllerBase
     {
         private ISender _mediatr = null!;

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using RealEstateAgency.Application.Common.Mappings;
 using RealEstateAgency.Domain.Entites;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RealEstateAgency.Application.Clients.Queries.GetClientList
 {
-    public class ClientItemDto
+    public class ClientItemDto : IMapFrom<Client>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
