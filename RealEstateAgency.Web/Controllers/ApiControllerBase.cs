@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RealEstateAgency.Web.Controllers
@@ -9,7 +8,6 @@ namespace RealEstateAgency.Web.Controllers
     public class ApiControllerBase : ControllerBase
     {
         private ISender _mediatr = null!;
-
         protected ISender Mediator => _mediatr ??= HttpContext.RequestServices.GetRequiredService<ISender>();
     }
 }
