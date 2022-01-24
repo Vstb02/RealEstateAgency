@@ -33,5 +33,22 @@ namespace RealEstateAgency.Web.Controllers
             var clientId = await Mediator.Send(command);
             return Ok(clientId);
         }
+        [HttpPut]
+        public async Task<ActionResult<Guid>> Update([FromBody] UpdateClientDto updateClientDto)
+        {
+            var command = _mapper.Map<UpdateClientCommand>(updateClientDto);
+            var clientId = await Mediator.Send(command);
+            return Ok(clientId);
+        }
+        [HttpDelete]
+        public async Task<ActionResult<Guid>> Delete(Guid id)
+        {
+            var command = new DeleteClientCommand()
+            {
+                Id = id
+            };
+            await Mediator.Send(command);
+            return NoContent();
+        }
     }
 }
