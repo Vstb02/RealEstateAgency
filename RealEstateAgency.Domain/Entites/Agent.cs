@@ -6,7 +6,7 @@ public class Agent
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Patronymic { get; set; }
-    public int DealShare { get; set; }
+    public int? DealShare { get; set; }
     public DateTime? Created { get; set; }
 }
 

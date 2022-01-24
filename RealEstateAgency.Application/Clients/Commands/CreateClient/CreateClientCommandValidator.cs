@@ -7,7 +7,7 @@ namespace RealEstateAgency.Application.Clients.Commands.CreateClient
         public CreateClientCommandValidator()
         {
             RuleFor(createClientCommand =>
-                createClientCommand.Name).NotEmpty().MaximumLength(250);
+                createClientCommand.Name).MaximumLength(250);
             RuleFor(createClientCommand =>
                 createClientCommand.Surname).MaximumLength(250);
             RuleFor(createClientCommand =>
